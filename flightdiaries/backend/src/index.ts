@@ -1,8 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import diaryRouter from './routes/diaries.ts';
 
 const app = express();
 app.use(express.json());
+// the frontend runs on its own port during development
+app.use(cors());
 
 const PORT = 3000;
 
